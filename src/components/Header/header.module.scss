@@ -1,0 +1,52 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 20px;
+  background-color: #dddddd;
+  >div {
+    padding: 15px 0;
+    font-weight: bold;
+    font-size: 20px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  ul {
+    padding: 0;
+    margin: 0 0 0 20px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    >li {
+      padding: 10px;
+      >a{
+        text-decoration: none;
+        &:hover {
+          cursor: pointer;
+          color: #797575;
+        }
+      }
+    }
+  }
+  @media (max-width: 615px) {
+    flex-direction: column;
+    >ul {
+      margin: 0;
+      flex-direction: column;
+      align-items: start;
+      >li{
+        display: block;
+        padding-left: 0;
+      }
+    }
+  }
+}
+.selected {
+  font-weight: bold;
+  color: #312F2F;
+}
+.nonSelected{
+  color: #312F2F;
+}
